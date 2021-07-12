@@ -4,6 +4,7 @@ var buttonColours = ["red", "blue", "green", "yellow"];
 var level = 0;
 var started = false;
 
+var bestScore = 0;
 
 
 $(document).keydown(function(event) {
@@ -36,7 +37,10 @@ function checkAnswer(currentLevel) {
   //3. Write an if statement inside checkAnswer() to check if the most recent user answer is the same as the game pattern. If so then log "success", otherwise log "wrong".
   if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
 
-    console.log("success");
+    if (bestScore < level) {
+             bestScore = level;
+             $("#best-score span").text(bestScore);
+         }
     // console.log(userClickedPattern);
     // console.log(gamePattern);
 
