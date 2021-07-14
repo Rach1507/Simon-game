@@ -31,6 +31,12 @@ body {
   opacity: 0.8;
 }
 
+#best-score {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+  margin:  2%;
+  color: #FEF2BF;
+}
 .red {
   background-color: red;
 }
